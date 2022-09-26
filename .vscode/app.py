@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 from WebScraper import *
 
 app = Flask(__name__)
@@ -6,8 +6,7 @@ isAdmin = False
 
 @app.route("/")
 def home():
-    yes = WebScraper.youaregay()
-    return yes
+    return render_template("index.html")
 
 @app.route("/noHax")
 def noHax():
