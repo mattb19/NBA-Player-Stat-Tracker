@@ -1,1 +1,3 @@
-# NBA-Player-Stat-Tracker
+## NBA-Player-Stat-Tracker
+
+# Collaborators: Matt Bryan
