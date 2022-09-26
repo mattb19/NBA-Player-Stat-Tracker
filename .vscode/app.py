@@ -1,6 +1,5 @@
 from flask import Flask, redirect, url_for
 from WebScraper import *
-from playerlist.py import *
 
 app = Flask(__name__)
 
