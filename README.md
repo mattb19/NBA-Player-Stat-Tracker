@@ -1,3 +1,3 @@
 ## NBA-Player-Stat-Tracker
 
-# Collaborators: Matt Bryan
+# Collaborators: Matt Bryan , Trent Salas
