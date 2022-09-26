@@ -1,7 +1,10 @@
-from flask import Flask
+from flask import Flask, redirect, url_for
+from WebScraper import *
+from playerlist.py import *
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "level 2 luke == ryan"
+    yes = WebScraper.youaregay()
+    return yes
