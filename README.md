@@ -1,4 +1,4 @@
 ## NBA-Player-Stat-Tracker
 
-# Collaborators: Matt Bryan , Trent Salas , Ryan Farrell
+# Collaborators: Matt Bryan, Ryan Farrell, Trent Salas
 
