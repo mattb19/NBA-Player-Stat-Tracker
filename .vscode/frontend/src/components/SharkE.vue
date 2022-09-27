@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ msg }}</p>
+    <button type="button" class="btn btn-primary">{{ msg }}</button>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
   name: "SharkE",
   data() {
     return {
-      msg: "",
+      msg: "shark",
     };
   },
   methods: {
