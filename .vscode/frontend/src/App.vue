@@ -6,6 +6,14 @@
 
 <style>
 #app {
-  margin-top: 100px;
+  text-align: center;
+}
+#nav {
+  padding: 30px;
+}
+.centeralign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

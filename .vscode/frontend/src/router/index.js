@@ -10,6 +10,10 @@ const routes = [
     name: "stats",
     component: stats,
   },
+  {
+    path: "/",
+    redirect: "/stats",
+  },
 ];
 
 const router = new VueRouter({

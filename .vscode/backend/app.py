@@ -7,9 +7,8 @@ app.config.from_object(__name__)
 
 CORS(app, resources={r'/*':{'origins': 'http://localhost:8080', "allow_headers" : "Access-Control-Allow-Origin"}})
 
+players = ["player1", "player2", "player3", "player4"]
 
-
-
-@app.route("/", methods=["GET"])
-def shark():
-    return "yer"
+@app.route("/yep", methods=["GET"])
+def main():
+    return players
