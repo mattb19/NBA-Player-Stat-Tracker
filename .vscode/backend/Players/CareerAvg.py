@@ -1,18 +1,12 @@
 from Player import *
 
-from ftplib import FTP
-from Player import *
-
-class RegTotal(Player):
-    def __init__(self, fg, fgPercent, threePt, threePtPercent, FT, FTPercent, OR, DR, REB, AST, BLK, STL, PF, TO, PTS):
-        self.fg = fg
+class PostAvg(Player):
+    def __init__(self, GP, min, fgPercent, threePtPercent, FTPercent, REB, AST, BLK, STL, PF, TO, PTS):
+        self.GP = GP
+        self.min = min
         self.fgPercent = fgPercent
-        self.threePt = threePt
         self.threePtPercent = threePtPercent
-        self.FT = FT
         self.FTPercent = FTPercent
-        self.OR = OR
-        self.DR = DR
         self.REB = REB
         self.AST = AST
         self.BLK = BLK
@@ -20,30 +14,21 @@ class RegTotal(Player):
         self.PF = PF
         self.TO = TO
         self.PTS = PTS
+    
+    def getGP(self):
+        return self.GP
 
-    def getFg(self):
-        return self.fg
+    def getMin(self):
+        return self.min
 
     def getFgPercent(self):
         return self.fgPercent
 
-    def getThreePt(self):
-        return self.threePt
-
     def getThreePtPercent(self):
         return self.threePtPercent
-
-    def getFt(self):
-        return self.FT
     
     def getFtPercent(self):
         return self.FTPercent
-
-    def getOR(self):
-        return self.OR
-
-    def getDR(self):
-        return self.DR
 
     def getREB(self):
         return self.REB
@@ -65,3 +50,4 @@ class RegTotal(Player):
     
     def getPTS(self):
         return self.PTS
+

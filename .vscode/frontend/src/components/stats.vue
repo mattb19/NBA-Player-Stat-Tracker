@@ -17,7 +17,6 @@
   margin-bottom: 20px;
 }
 </style>
-
 <template>
   <div class="home">
     <div class="nba-logo">
@@ -45,6 +44,7 @@
               <th scope="col">Player</th>
               <th scope="col">W/L</th>
               <th scope="col">PPG</th>
+              <th scope="col">Select</th>
             </tr>
           </thead>
           <tbody>
@@ -52,6 +52,11 @@
               <td>{{ stats.player }}</td>
               <td>{{ stats.wl }}</td>
               <td>{{ stats.ppg }}</td>
+              <td>
+                <button type="button" class="btn btn-info btn-sm">
+                  Select
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>

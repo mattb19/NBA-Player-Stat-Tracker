@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, request
 from flask_cors import CORS
 from WebScraper import *
 from flask import jsonify
@@ -32,13 +32,12 @@ stats = [
 ]
 
 # GET Route Handler
-@app.route("/playerstats", methods=['GET'])
+@app.route("/playerstats", methods=['GET', 'POST'])
 def playerstats():
     return jsonify({
         "stats" : stats,
         "status" : "success"
     })
-
 
 @app.route("/")
 def home():
