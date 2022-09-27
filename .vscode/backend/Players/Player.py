@@ -3,6 +3,7 @@ class Player:
         self.firstName = firstName
         self.lastName = lastName
         self.season = season
+        self.age = age
     
     def __str__(self):
         return self.firstName+" "+self.lastName
@@ -15,3 +16,8 @@ class Player:
     
     def getSeason(self):
         return self.season
+    
+    def getAge(self):
+        return self.age
+
+

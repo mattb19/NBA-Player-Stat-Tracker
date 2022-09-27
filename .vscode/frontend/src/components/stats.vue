@@ -42,16 +42,36 @@
           <thead>
             <tr>
               <th scope="col">Player</th>
-              <th scope="col">W/L</th>
-              <th scope="col">PPG</th>
-              <th scope="col">Select</th>
+              <th scope="col">GP</th>
+              <th scope="col">Min</th>
+              <th scope="col">FG%</th>
+              <th scope="col">3P%</th>
+              <th scope="col">FT%</th>
+              <th scope="col">REB</th>
+              <th scope="col">AST</th>
+              <th scope="col">BLK</th>
+              <th scope="col">STL</th>
+              <th scope="col">PF</th>
+              <th scope="col">TO</th>
+              <th scope="col">PTS</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(stats, index) in stats" :key="index">
               <td>{{ stats.player }}</td>
-              <td>{{ stats.wl }}</td>
-              <td>{{ stats.ppg }}</td>
+              <td>{{ stats.gp }}</td>
+              <td>{{ stats.min }}</td>
+              <td>{{ stats.fgpercent }}</td>
+              <td>{{ stats.threeptpercent }}</td>
+              <td>{{ stats.ftpercent }}</td>
+              <td>{{ stats.reb }}</td>
+              <td>{{ stats.ast }}</td>
+              <td>{{ stats.blk }}</td>
+              <td>{{ stats.stl }}</td>
+              <td>{{ stats.pf }}</td>
+              <td>{{ stats.to }}</td>
+              <td>{{ stats.pts }}</td>
               <td>
                 <button type="button" class="btn btn-info btn-sm">
                   Select
