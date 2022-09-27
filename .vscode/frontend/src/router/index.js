@@ -1,14 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import SharkE from "../components/SharkE.vue";
+import stats from "../components/stats.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "shark",
-    component: SharkE,
+    path: "/stats",
+    name: "stats",
+    component: stats,
   },
 ];
 
