@@ -11,6 +11,11 @@
 .btn {
   background-color: #000000;
 }
+
+.col-md-6 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 </style>
 
 <template>
@@ -29,10 +34,6 @@
       />
     </div>
     <div class="col-md-6 centeralign">
-      <p>This Page Displays a list of players and their stats</p>
-      <p>
-        <b>Select any two players to compare stats</b>
-      </p>
       <p>{{ msg }}</p>
     </div>
     <div class="row">
@@ -69,7 +70,6 @@
 import axios from "axios";
 
 export default {
-  name: "Players",
   data() {
     return {
       msg: "",
@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     getResponse() {
-      const path = "http://127.0.0.1:5000/yep";
+      const path = "http://127.0.0.1:5000/players";
       axios
         .get(path)
         .then((res) => {

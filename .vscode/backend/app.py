@@ -9,6 +9,10 @@ CORS(app, resources={r'/*':{'origins': 'http://localhost:8080', "allow_headers" 
 
 players = ["player1", "player2", "player3", "player4"]
 
-@app.route("/yep", methods=["GET"])
+@app.route("/players", methods=["GET"])
 def main():
     return players
+
+@app.route("/")
+def home():
+    return redirect(url_for("main"))
