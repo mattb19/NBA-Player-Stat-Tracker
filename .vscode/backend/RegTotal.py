@@ -3,7 +3,7 @@ from Player import *
 from ftplib import FTP
 from Player import *
 
-class RegAvg(Player):
+class RegTotal(Player):
     def __init__(self, fg, fgPercent, threePt, threePtPercent, FT, FTPercent, OR, DR, REB, AST, BLK, STL, PF, TO, PTS):
         self.fg = fg
         self.fgPercent = fgPercent

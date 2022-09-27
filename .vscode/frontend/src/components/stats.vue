@@ -34,7 +34,7 @@
       />
     </div>
     <div class="col-md-6 centeralign">
-      <p>{{ msg }}</p>
+      <p>Below you will find stats of players in NBA</p>
     </div>
     <div class="row">
       <div class="col-sm-12">
@@ -45,19 +45,13 @@
               <th scope="col">Player</th>
               <th scope="col">W/L</th>
               <th scope="col">PPG</th>
-              <th scope="col">Select</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button type="button" class="btn btn-info btn-sm">
-                  Select
-                </button>
-              </td>
+            <tr v-for="(stats, index) in stats" :key="index">
+              <td>{{ stats.player }}</td>
+              <td>{{ stats.wl }}</td>
+              <td>{{ stats.ppg }}</td>
             </tr>
           </tbody>
         </table>
@@ -72,16 +66,16 @@ import axios from "axios";
 export default {
   data() {
     return {
-      msg: "",
+      stats: [],
     };
   },
   methods: {
-    getResponse() {
-      const path = "http://127.0.0.1:5000/players";
+    getStats() {
+      const path = "http://127.0.0.1:5000/playerstats";
       axios
         .get(path)
         .then((res) => {
-          this.msg = res.data;
+          this.stats = res.data.stats;
         })
         .catch((err) => {
           console.error(err);
@@ -89,7 +83,7 @@ export default {
     },
   },
   created() {
-    this.getResponse();
+    this.getStats();
   },
 };
 </script>
