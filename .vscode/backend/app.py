@@ -15,6 +15,6 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/byrd", methods=["GET"])
+@app.route("/shark", methods=["GET"])
 def MsByrdDipped():
-    return "byrd"
+    return "shark"

@@ -7,7 +7,7 @@
 <script>
 import axios from "axios";
 export default {
-  name: "MsByrdDipped",
+  name: "SharkE",
   data() {
     return {
       msg: "",
@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     getResponse() {
-      const path = "http://localhost:5000/byrd";
+      const path = "http://127.0.0.1:5000/shark";
       axios
         .get(path)
         .then((res) => {
