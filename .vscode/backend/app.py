@@ -13,3 +13,8 @@ CORS(app, resources={r'/*':{'origins': 'http://localhost:8080', "allow_headers" 
 @app.route("/", methods=["GET"])
 def home():
     return render_template("index.html")
+
+
+@app.route("/byrd", methods=["GET"])
+def MsByrdDipped():
+    return "byrd"
