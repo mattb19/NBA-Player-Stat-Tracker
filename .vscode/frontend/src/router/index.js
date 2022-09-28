@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import stats from "../components/stats.vue";
+import comparing from "../components/comparing.vue";
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,11 @@ const routes = [
   {
     path: "/",
     redirect: "/stats",
+  },
+  {
+    path: "/comparing",
+    name: comparing,
+    component: comparing,
   },
 ];
 
