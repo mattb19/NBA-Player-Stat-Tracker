@@ -8,13 +8,8 @@
   background-color: #17408b;
 }
 
-.btn {
-  background-color: #000000;
-}
-
-.col-md-6 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.col-sm-12 {
+  margin-right: 100px;
 }
 
 .home {
@@ -72,7 +67,18 @@
       />
     </div>
     <div class="row">
-      <div class="col-sm-12">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
+        integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG"
+        crossorigin="anonymous"
+      />
+      <div class="col-sm-12 centeralign">
+        <a
+          href="http://localhost:8080/comparing"
+          class="btn btn-outline-light a"
+          >Compare</a
+        >
         <table class="table table-dark">
           <thead>
             <tr>
@@ -92,6 +98,7 @@
               <th scope="col">PF</th>
               <th scope="col">TO</th>
               <th scope="col">PTS</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -103,7 +110,7 @@
                   height="80px"
                 />
               </td>
-              <td>{{ stats.player }}</td>
+              <td>{{ stats.name }}</td>
               <td>{{ stats.age }}</td>
               <td>{{ stats.number }}</td>
               <td>{{ stats.gp }}</td>
@@ -118,6 +125,11 @@
               <td>{{ stats.pf }}</td>
               <td>{{ stats.to }}</td>
               <td>{{ stats.pts }}</td>
+              <td>
+                <button type="button" class="btn btn-outline-light">
+                  Select
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -125,31 +137,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import axios from "axios";
-
-export default {
-  data() {
-    return {
-      stats: [],
-    };
-  },
-  methods: {
-    getStats() {
-      const path = "http://127.0.0.1:5000/compare";
-      axios
-        .get(path)
-        .then((res) => {
-          this.stats = res.data.comparison;
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    },
-  },
-  created() {
-    this.getStats();
-  },
-};
-</script>
