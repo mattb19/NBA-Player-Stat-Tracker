@@ -32,6 +32,7 @@ CORS(app, resources={r'/*':{'origins': 'http://localhost:8080', "allow_headers" 
 
 # newComparison = Comparison(Mike, LeBron)
 # comparison = newComparison.getComparison()
+
 kev = WebScraper().getData("Kevin Durant")
 steph = WebScraper().getData("Stephen Curry")
 
@@ -39,6 +40,9 @@ players = [kev, steph]
 newPlayerList = PlayerList()
 newPlayerList.setPlayerList(players)
 playerList = newPlayerList.getPlayerList()
+
+newComparison = Comparison(kev[1], steph[1])
+comparison = newComparison.getComparison()
 
 
 
