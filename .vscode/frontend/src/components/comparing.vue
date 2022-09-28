@@ -54,7 +54,7 @@
 											<h3>Player #2 Selected</h3>
 											<ul>Stat</ul>
 											<ul></ul>
-											<ul></ul>
+											<ul>yuhhhhhhhhhhh</ul>
 											<ul></ul>
 										</section>
 								   </section>
