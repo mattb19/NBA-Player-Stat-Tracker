@@ -17,31 +17,12 @@
   margin-bottom: 20px;
 }
 
-.row {
-  width: 500px;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-.row tbody {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  height: 50px;
-}
-.row thead tr {
-  display: block;
-}
-.row th,
-.row td {
-  padding: 5px 10px;
-  width: 200px;
-}
-th {
-  background: #abdd93;
+.home {
+  background-color: #383c44;
 }
 </style>
 <template>
-  <div class="home" style="background-color: blue">
+  <div class="home">
     <div class="nba-logo">
       <link
         rel="stylesheet"
@@ -57,9 +38,7 @@ th {
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <button type="button" class="btn btn-info btn-lg">
-          <a href="http://localhost:8080/stats"> Home </a>
-        </button>
+        <a href="http://localhost:8080/" class="btn btn-outline-light">Home</a>
         <table class="table table-hover">
           <thead>
             <tr>
@@ -109,33 +88,6 @@ th {
           </tbody>
         </table>
       </div>
-    </div>
-    <div class="col-6 col-6-medium col-12-xsmall centeralign">
-      <section id="content">
-        <section>
-          <ul>
-            {{
-              stats[1].team
-            }}
-          </ul>
-          <ul>
-            Stat
-          </ul>
-          <ul></ul>
-          <ul></ul>
-          <ul></ul>
-          <ul></ul>
-        </section>
-        <section>
-          <h3>Player #2 Selected</h3>
-          <ul>
-            Stat
-          </ul>
-          <ul></ul>
-          <ul></ul>
-          <ul></ul>
-        </section>
-      </section>
     </div>
   </div>
 </template>
