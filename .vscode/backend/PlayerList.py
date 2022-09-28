@@ -14,7 +14,7 @@ class PlayerList:
         playerList = []
         for i in self.playerList:
             player = {
-                'team':'',
+                'team':i.getTeam(),
                 'player':str(i),
                 'age':str(i.getAge()),
                 'number':i.getNumber(),

@@ -16,9 +16,32 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.row {
+  width: 500px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.row tbody {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  height: 50px;
+}
+.row thead tr {
+  display: block;
+}
+.row th,
+.row td {
+  padding: 5px 10px;
+  width: 200px;
+}
+th {
+  background: #abdd93;
+}
 </style>
 <template>
-  <div class="home">
+  <div class="home" style="background-color: blue">
     <div class="nba-logo">
       <link
         rel="stylesheet"
@@ -28,8 +51,8 @@
       />
       <img
         src="../assets/nba-logo-transparent.png"
-        width="80px"
-        height="176px"
+        width="54px"
+        height="118px"
       />
     </div>
     <div class="row">
@@ -61,7 +84,11 @@
           <tbody>
             <tr v-for="(stats, index) in stats" :key="index">
               <td>
-                <img :src="stats.team" width="80px" height="80px" />
+                <img
+                  :src="require('../assets/' + stats.team + '.png')"
+                  width="80px"
+                  height="80px"
+                />
               </td>
               <td>{{ stats.player }}</td>
               <td>{{ stats.age }}</td>
@@ -86,7 +113,11 @@
     <div class="col-6 col-6-medium col-12-xsmall centeralign">
       <section id="content">
         <section>
-          <h3>Player #1 Selected</h3>
+          <ul>
+            {{
+              stats[1].team
+            }}
+          </ul>
           <ul>
             Stat
           </ul>
@@ -120,11 +151,11 @@ export default {
   },
   methods: {
     getStats() {
-      const path = "http://127.0.0.1:5000/playerstats";
+      const path = "http://127.0.0.1:5000/compare";
       axios
         .get(path)
         .then((res) => {
-          this.stats = res.data.stats;
+          this.stats = res.data.comparison;
         })
         .catch((err) => {
           console.error(err);

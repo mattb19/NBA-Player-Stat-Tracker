@@ -8,19 +8,12 @@
   background-color: #17408b;
 }
 
-.btn {
-  background-color: #000000;
-  display: block;
+.col-sm-12 {
+  margin-right: 100px;
 }
 
-.btn a {
-  background-color: #17408b;
-  display: block;
-}
-
-.col-md-6 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.home {
+  background-color: #383c44;
 }
 </style>
 <template>
@@ -34,19 +27,22 @@
       />
       <img
         src="../assets/nba-logo-transparent.png"
-        width="80px"
-        height="176px"
+        width="54px"
+        height="118px"
       />
     </div>
-    <div class="col-md-6 centeralign">
-      <p>Below you will find stats of players in NBA</p>
-    </div>
     <div class="row">
-      <div class="col-sm-12">
-        <button type="button" class="block centeralign">
-          <a href="http://localhost:8080/comparing"> Compare </a>
-        </button>
-        <table class="table table-hover">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
+        integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG"
+        crossorigin="anonymous"
+      />
+      <div class="col-sm-12 centeralign">
+        <a href="http://localhost:8080/comparing" class="btn btn-outline-light"
+          >Compare</a
+        >
+        <table class="table table-dark">
           <thead>
             <tr>
               <th scope="col">Team</th>
@@ -71,7 +67,11 @@
           <tbody>
             <tr v-for="(stats, index) in stats" :key="index">
               <td>
-                <img :src="stats.team" width="80px" height="80px" />
+                <img
+                  :src="require('../assets/' + stats.team + '.png')"
+                  width="80px"
+                  height="80px"
+                />
               </td>
               <td>{{ stats.player }}</td>
               <td>{{ stats.age }}</td>
@@ -89,7 +89,7 @@
               <td>{{ stats.to }}</td>
               <td>{{ stats.pts }}</td>
               <td>
-                <button type="button" class="btn btn-info btn-sm">
+                <button type="button" class="btn btn-outline-light">
                   Select
                 </button>
               </td>

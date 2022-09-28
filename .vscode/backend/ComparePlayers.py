@@ -11,7 +11,7 @@ class Comparison:
     def getComparison(self):
         return [
             {
-                'team':'',
+                'team':self.player1.getTeam(),
                 'player':str(self.player1),
                 'age':str(self.player1.getAge()),
                 'number':self.player1.getNumber(),
@@ -29,7 +29,7 @@ class Comparison:
                 'pts':self.player1.getPTS()
             },
             {
-                'team':'',
+                'team':self.player2.getTeam(),
                 'player':str(self.player2),
                 'age':str(self.player2.getAge()),
                 'number':self.player2.getNumber(),

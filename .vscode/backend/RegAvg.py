@@ -1,9 +1,7 @@
 from Player import Player
 
-
 class RegAvg(Player):
-    def __init__(self, firstName, lastName, age, number, GP, minu, fgPercent, threePtPercent, FTPercent, REB, AST, BLK,
-                 STL, PF, TO, PTS):
+    def __init__(self, firstName, lastName, age, number, team, GP, minu, fgPercent, threePtPercent, FTPercent, REB, AST, BLK, STL, PF, TO, PTS):
         self.GP = GP
         self.min = minu
         self.fgPercent = fgPercent
@@ -16,7 +14,7 @@ class RegAvg(Player):
         self.PF = PF
         self.TO = TO
         self.PTS = PTS
-        Player.__init__(self, firstName, lastName, age, number)
+        Player.__init__(self, firstName, lastName, age, number, team)
 
     def getGP(self):
         return str(self.GP)
