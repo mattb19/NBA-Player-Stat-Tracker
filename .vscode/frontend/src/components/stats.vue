@@ -18,6 +18,41 @@
 </style>
 <template>
   <div class="home">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="http://localhost:8080/">PlayerStats</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/nba">NBA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/nfl">NFL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/mlb">MLB</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/nhl">NHL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pga">PGA</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="nba-logo">
       <link
         rel="stylesheet"
@@ -39,7 +74,9 @@
         crossorigin="anonymous"
       />
       <div class="col-sm-12 centeralign">
-        <a href="http://localhost:8080/comparing" class="btn btn-outline-light"
+        <a
+          href="http://localhost:8080/comparing"
+          class="btn btn-outline-light a"
           >Compare</a
         >
         <table class="table table-dark">
