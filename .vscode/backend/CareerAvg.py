@@ -1,7 +1,7 @@
 from Player import *
 
-class PostAvg(Player):
-    def __init__(self, GP, min, fgPercent, threePtPercent, FTPercent, REB, AST, BLK, STL, PF, TO, PTS):
+class CareerAvg(Player):
+    def __init__(self, firstName, lastName, age, number, GP, min, fgPercent, threePtPercent, FTPercent, REB, AST, BLK, STL, PF, TO, PTS):
         self.GP = GP
         self.min = min
         self.fgPercent = fgPercent
@@ -14,6 +14,7 @@ class PostAvg(Player):
         self.PF = PF
         self.TO = TO
         self.PTS = PTS
+        Player.__init__(self, firstName, lastName, age, number)        
     
     def getGP(self):
         return self.GP
