@@ -37,10 +37,13 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <button type="button" class="btn btn-info btn-lg">Compare</button>
+        <button type="button" class="btn btn-info btn-lg">
+          <a href="http://localhost:8080/comparing"> Compare </a>
+        </button>
         <table class="table table-hover">
           <thead>
             <tr>
+              <th scope="col">Team</th>
               <th scope="col">Player</th>
               <th scope="col">GP</th>
               <th scope="col">Min</th>
@@ -59,6 +62,14 @@
           </thead>
           <tbody>
             <tr v-for="(stats, index) in stats" :key="index">
+              <td>
+                <img
+                  src="../assets/nba-logo-transparent.png"
+                  width="80px"
+                  height="176px"
+                />
+              </td>
+              <td>{{ stats.team }}</td>
               <td>{{ stats.player }}</td>
               <td>{{ stats.gp }}</td>
               <td>{{ stats.min }}</td>
