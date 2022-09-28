@@ -10,6 +10,12 @@
 
 .btn {
   background-color: #000000;
+  display: block;
+}
+
+.btn a {
+  background-color: #17408b;
+  display: block;
 }
 
 .col-md-6 {
@@ -37,7 +43,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <button type="button" class="btn btn-info btn-lg">
+        <button type="button" class="block centeralign">
           <a href="http://localhost:8080/comparing"> Compare </a>
         </button>
         <table class="table table-hover">
@@ -45,6 +51,8 @@
             <tr>
               <th scope="col">Team</th>
               <th scope="col">Player</th>
+              <th scope="col">Age</th>
+              <th scope="col">#</th>
               <th scope="col">GP</th>
               <th scope="col">Min</th>
               <th scope="col">FG%</th>
@@ -63,14 +71,11 @@
           <tbody>
             <tr v-for="(stats, index) in stats" :key="index">
               <td>
-                <img
-                  src="../assets/nba-logo-transparent.png"
-                  width="80px"
-                  height="176px"
-                />
+                <img :src="stats.team" width="80px" height="80px" />
               </td>
-              <td>{{ stats.team }}</td>
               <td>{{ stats.player }}</td>
+              <td>{{ stats.age }}</td>
+              <td>{{ stats.number }}</td>
               <td>{{ stats.gp }}</td>
               <td>{{ stats.min }}</td>
               <td>{{ stats.fgpercent }}</td>

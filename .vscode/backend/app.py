@@ -10,24 +10,40 @@ CORS(app, resources={r'/*':{'origins': 'http://localhost:8080', "allow_headers" 
 
 stats = [
     {
+        'team':'../assets/bulls.png',
         'player':'Mike Jordan',
-        'wl':'100%',
-        'ppg':100.2
+        'age':'50',
+        'number':'23',
+        'gp':'10',
+        'min':'10',
+        'fgpercent':'10',
+        'threeptpercent':'10',
+        'ftpercent':'10',
+        'reb':'10',
+        'ast':'10',
+        'blk':'10',
+        'stl':'10',
+        'pf':'10',
+        'to':'10',
+        'pts':'10',
     },
     {
-        'player':'Steph Curry',
-        'wl':'99%',
-        'ppg':0.2
-    },
-    {
-        'player':'Gianny',
-        'wl':'50%',
-        'ppg':2.2
-    },
-    {
-        'player':'Lebron Jame',
-        'wl':'1%',
-        'ppg':0.1
+        'team':'../assets/lakers.png',
+        'player':'Lebrabra Jame',
+        'age':'100',
+        'number':'69',
+        'gp':'10',
+        'min':'10',
+        'fgpercent':'10',
+        'threeptpercent':'10',
+        'ftpercent':'10',
+        'reb':'10',
+        'ast':'10',
+        'blk':'10',
+        'stl':'10',
+        'pf':'10',
+        'to':'10',
+        'pts':'10',
     }
 ]
 
