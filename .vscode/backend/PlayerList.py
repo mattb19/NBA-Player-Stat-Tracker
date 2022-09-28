@@ -12,10 +12,13 @@ class PlayerList:
     
     def getPlayerList(self):
         playerList = []
-        for i in self.playerList:
+        for x in self.playerList:
+            playerStats = []
+            i = x[0]
             player = {
                 'team':i.getTeam(),
-                'player':str(i),
+                'name':str(i),
+                'pos':i.getPos(),
                 'age':str(i.getAge()),
                 'number':i.getNumber(),
                 'gp':i.getGP(),

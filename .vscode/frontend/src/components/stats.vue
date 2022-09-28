@@ -73,7 +73,7 @@
                   height="80px"
                 />
               </td>
-              <td>{{ stats.player }}</td>
+              <td>{{ stats.name }}</td>
               <td>{{ stats.age }}</td>
               <td>{{ stats.number }}</td>
               <td>{{ stats.gp }}</td>
