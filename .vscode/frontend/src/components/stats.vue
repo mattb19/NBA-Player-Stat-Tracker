@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarColor02">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/nba">NBA</a>
+              <a class="nav-link active" href="/nba">NBA</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/nfl">NFL</a>

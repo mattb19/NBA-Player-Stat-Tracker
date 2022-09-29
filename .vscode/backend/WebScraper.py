@@ -13,7 +13,7 @@ class WebScraper:
         #List of team roster URLs to check for player name
         URLs = ["http://www.espn.com/nba/teams/roster?team=Bos",
                 "http://www.espn.com/nba/teams/roster?team=BKN",
-                "http://www.espn.com/nba/teams/roster?team=NY",
+                "http://www.espn.com/nba/teams/roster?team=NY" ,
                 "http://www.espn.com/nba/teams/roster?team=Phi",
                 "http://www.espn.com/nba/teams/roster?team=Tor",
                 "http://www.espn.com/nba/teams/roster?team=Chi",
